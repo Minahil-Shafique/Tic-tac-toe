@@ -1,0 +1,38 @@
+body {
+  overflow: hidden;
+  background-color: #9ed2cb;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board {
+  background-color: #9ed2cb;
+  height: 600px;
+  width: 600px;
+  border: 0px;
+}
+.square {
+  background-color: #9ed2cb;
+  border-color: #665a48;
+  height: 200px;
+  width: 200px;
+  font-size: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.status {
+  padding: 10px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #665a48;
+}
