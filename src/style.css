@@ -1,6 +1,6 @@
 body {
   overflow: hidden;
-  background-color: #9ed2cb;
+  background-color:#9ed0d2;
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,10 +12,11 @@ body {
   height: 600px;
   width: 600px;
   border: 0px;
+  box-shadow: 2px 2px grey;
 }
 .square {
-  background-color: #9ed2cb;
-  border-color: #665a48;
+  background-color: #9ed0d2;
+  border-color: rgb(217, 243, 241);
   height: 200px;
   width: 200px;
   font-size: 120px;
@@ -23,16 +24,36 @@ body {
   justify-content: center;
   align-items: center;
 }
+.square:hover{
+  background-color: #9ec7d2;
+}
+.reset:hover{
+  background-color: #97d5f5;
+}
 .board-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
 .status {
   padding: 10px;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 30px;
-  color: #665a48;
+}
+
+.container{
+  margin: 20px;
+  height: 600px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9ec7d2;
+}
+
+.reset{
+  border-radius: 5px;
+  display: inline-block;
+  border: 0px;
 }

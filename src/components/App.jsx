@@ -28,30 +28,37 @@ export default function App() {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
+    let handleReset = () => {
+        setSquares(Array(9).fill(null));
+    }
+ 
   return (
     <>
+      {winner ? 
+      ( <div class="container"  >
+      <h1>Winner is {winner}</h1>
+      <button className="reset" onClick={handleReset}>Play Again</button></div>) : 
+      <>
       <div className="status">{status}</div>
-      <div className="board">
-        <div className="board-row">
+         <div className="board">
+            <div className="board-row">
           <Square
             className="bl bt"
             value={s[0]}
             onSquareClick={() => handleClick(0)}
           />
           <Square
-            className="bt"
+            
             value={s[1]}
             onSquareClick={() => handleClick(1)}
           />
           <Square
-            className="bt br"
             value={s[2]}
             onSquareClick={() => handleClick(2)}
           />
-        </div>
-        <div className="board-row">
+            </div>
+            <div className="board-row">
           <Square
-            className="br"
             value={s[3]}
             onSquareClick={() => handleClick(3)}
           />
@@ -65,10 +72,9 @@ export default function App() {
             value={s[5]}
             onSquareClick={() => handleClick(5)}
           />
-        </div>
-        <div className="board-row">
+            </div>
+            <div className="board-row">
           <Square
-            className="bl bb"
             value={s[6]}
             onSquareClick={() => handleClick(6)}
           />
@@ -82,9 +88,10 @@ export default function App() {
             value={s[8]}
             onSquareClick={() => handleClick(8)}
           />
-        </div>
-      </div>
-    </>
+            </div>
+         </div>
+      </>}
+   </>
   );
 }
 
